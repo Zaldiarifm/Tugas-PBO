@@ -1,0 +1,30 @@
+<?php  
+	class jarak 
+	{
+		public $kilometer;
+		
+		function __construct($kilometer)
+		{
+			$this->kilometer=$kilometer;
+			echo "<h1>Konversi jarak dari Kilometer ke Meter dan centimeter</h1>";
+			echo "jarak dalam $kilometer kilometer<br>";
+		}
+
+		public function meter(){
+			$meter=$this->kilometer+999;
+			echo "<br/><b>jarak dalam 1 kilometer = $meter meter</b><br/>";
+		}
+		public function sentimeter(){
+			$sentimeter=$this->kilometer*100000;
+			echo "<br/><b>jarak dalam 1 kilometer = $sentimeter sentimeter</b><br/>";
+		}
+
+		function __destruct(){
+			echo "<br><i>by zaldi arif mulkan</i>";
+		}
+	}
+
+	$jarak=New Jarak(1);
+	$jarak->meter();
+	$jarak->sentimeter();
+?>
