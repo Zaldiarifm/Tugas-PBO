@@ -1,0 +1,44 @@
+<?php
+
+// buat abstract class
+abstract class motor{
+   // buat abstract method
+   abstract public function starter_mesin();
+}
+  
+class honda extends motor{
+   public function starter_mesin(){
+     return "Mesin motor honda hidup";
+   }
+}
+  
+class yamaha extends motor{
+   public function starter_mesin(){
+     return "Mesin motor yamaha hidup";
+   }
+}
+  
+class kawasaki extends motor{
+public function starter_mesin(){
+     return "Mesin motor kawasaki hidup";
+   }
+}
+  
+// buat objek dari class diatas
+$motor_honda = new honda();
+$motor_yamaha = new yamaha();
+$motor_kawasaki = new kawasaki();
+  
+// buat fungsi untuk memproses objek
+function starter_mesin_motor($objek_motor){
+   return $objek_motor->starter_mesin();
+}
+  
+// jalankan fungsi
+echo starter_mesin_motor($motor_honda);
+echo "<hr>";
+echo starter_mesin_motor($motor_yamaha);
+echo "<hr>";
+echo starter_mesin_motor($motor_kawasaki);
+?>
+```
