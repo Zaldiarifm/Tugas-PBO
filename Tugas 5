@@ -1,0 +1,31 @@
+<?php
+print "Zaldi Arif Mulkan<br><br>";
+class Gaji{
+public $gaji_pokok;
+public $tunjangan;
+public $bonus;
+public function __construct($gaji_pokok, $tunjangan, $bonus){
+      $this->gaji_pokok = $gaji_pokok;
+      $this->tunjangan = $tunjangan;
+      $this->bonus = $bonus;
+      
+    }
+  }
+  
+  final class hitung extends Gaji{
+    public function hitung_Gaji(){
+      $x = $this->gaji_pokok + $this->tunjangan + $this->bonus;
+      return $x;
+    }
+    
+  final public function __destruct(){
+    echo "Keterangan :<br><br>
+          **gaji adalah bayaran setiap bulan untuk pegawai** <br>
+          1. Gaji Pokok (bayaran wajib untuk setiap pegawai) <br>
+          2. Tunjangan (kebutuhan bulanan setiap pegawai) <br>
+          3. Bonus (di nilai dari kinerja pegawai)";
+    }
+  }  
+  $Gaji_jumlah= new hitung(3000000, 2000000, 1000000); 
+  echo "Perhitungan Pemasukan Gaji Bulanan  = " . $Gaji_jumlah->hitung_Gaji() . "<hr>";
+?>
