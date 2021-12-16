@@ -1,0 +1,27 @@
+<?php
+print "Kelompok 4<br><br>";
+class Air extends Exception{
+    public function pesanError(){
+      $error = 'MAAF TIDAK MENDAPATKAN AIR';
+      return $error ;
+    }
+  }
+  
+  $harga= 20000;
+	try{
+    if($harga > 20000){
+      throw new Air($harga);
+    }
+    else{
+      throw new Exception("SELAMAT MENDAPATKAN AIR BERSIH");
+    }
+  }
+  
+  catch(Air $e){
+    echo $e-> pesanError();
+  }
+  
+  catch(Exception $e){
+    echo $e-> getMessage();
+  }
+?>
